@@ -34,3 +34,60 @@ npm run build
 
 **Ejecuta el servidor**
 npm run dev
+
+# Indicaciones de acceso a Swagger
+Para acceder a la documentación de la API, visita la siguiente URL: `http://localhost:3000/api-docs`
+
+# Realizar pruebas básicas de la API
+
+Para realizar pruebas de la API, podemos usar Swagger y sus casos de prueba, accediendo a la siguiente URL: `http://localhost:3000/api-docs/`
+
+Otra manera de probar los metodos es utilizando herramientas como `https://www.postman.com/`.
+
+### 1. Usando Postman
+
+1. **Descarga e Instala Postman**:
+   - Si no tienes Postman instalado, descárgalo desde `https://www.postman.com/downloads/` e instálalo.
+
+2. **Configuración de las Solicitudes**:
+   - Abre Postman y crea una nueva colección para organizar tus pruebas.
+   - Agrega nuevas solicitudes con los siguientes detalles:
+
+   **Registrar un nuevo usuario (POST)**
+   - URL: `http://localhost:3000/api/usuarios/registrar`
+   - Método: `POST`
+   - Body:
+     ```json
+     {
+       "name": "Ejemplo",
+       "email": "ejemplo@correo.com"
+     }
+     ```
+
+   **Obtener todos los usuarios (GET)**
+   - URL: `http://localhost:3000/api/usuarios/obtener`
+   - Método: `GET`
+
+   **Obtener usuario por ID (GET)**
+   - URL: `http://localhost:3000/api/usuarios/obtenerPorID/1`
+   - Método: `GET`
+
+   **Actualizar usuario (PUT)**
+   - URL: `http://localhost:3000/api/usuarios/actualizar/1`
+   - Método: `PUT`
+   - Body:
+     ```json
+     {
+       "name": "Nuevo Nombre",
+       "email": "nuevo@correo.com"
+     }
+     ```
+
+   **Eliminar usuario (DELETE)**
+   - URL: `http://localhost:3000/api/usuarios/eliminar/1`
+   - Método: `DELETE`
+
+   **Contador (GET)**
+   - URL: `http://localhost:3000/api/usuarios/contador`
+   - Método: `GET`
+
